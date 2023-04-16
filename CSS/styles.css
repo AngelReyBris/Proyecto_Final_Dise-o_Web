@@ -62,8 +62,7 @@ h1,h2,h3{
 .boton{
     background-color: var(--primario);
     color: var(--blanco);
-    padding: 1rem 3rem;
-    margin-top: 3rem;
+    padding: 1rem 2rem;
     font-size: 2rem;
     text-decoration: none;
     text-transform: uppercase;
@@ -174,13 +173,12 @@ h1,h2,h3{
     
     background-color: var(--extra);
     width: min(50rem,100%);
-    height: 30rem;
+    height: 33rem;
     margin: 0 auto;
     padding: 2rem;
     border-radius: 1rem;
 
 }
-
 .formulario fieldset{
     border: none;
 }
@@ -192,6 +190,28 @@ h1,h2,h3{
     color: var(--negro);
     margin-bottom: 2rem;
 }
+.formulario2{
+    background-color: var(--extra);
+    width: min(50rem,100%);
+    height: 40rem;
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 1rem;
+
+}
+.formulario2 fieldset{
+    border: none;
+}
+.formulario2 legend{
+    text-align: center;
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--negro);
+    margin-bottom: 2rem;
+}
+
+
 
 .campo:nth-child(3),
 .campo:nth-child(4){
