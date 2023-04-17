@@ -1,62 +1,66 @@
-# Proyecto_Final_Dise-o_Web
-Proyecto Final para el curso de diseño web UNICA
-# Proyecto de máquina expendedora en Figma:
-## Estos son los pasos por seguir para generar el proyecto completo (cabe aclarar que habrá que buscar cómo implementar en figma lo que viene en las instrucciones):
-1.	**Diseñar la estructura general de la página principal: crear una página principal y agregar secciones para el encabezado, el contenido principal y el pie de página. crear una barra de navegación que permita cambiar entre la sección de administrador y la sección de cliente.**
-2.	**diseñar la sección del administrador:**
+# Flujo de trabajo:
+[![HOLa.jpg](https://i.postimg.cc/Xvxs2RN5/HOLa.jpg)](https://postimg.cc/qthcqZ3B)
 
-> **para la sección del administrador:**
+El flujo de trabajo para este proyecto se divide en dos secciones principales: la sección del administrador y la sección del cliente.
 
-1.	crear una página principal: crear una nueva página que se llame “administrador”. hoy esta será la página principal desde la que se podrá acceder a las diferentes secciones del panel de administración.
-2.	Crear la página de inicio de sesión: crear una nueva página y llamarla “inicio de sesión”. esta página debe incluir un formulario de inicio de sesión con campos para el correo electrónico y la contraseña. también debe incluir un botón para enviar el formulario y acceder al panel de administración.
-3.	crear las páginas de agregar y modificar productos: crear 2 nuevas páginas y nombrarlas “agregar producto” y “modificar producto”. estas páginas van a incluir formularios con los campos necesarios para agregar o modificar un producto. cuando se envían los datos del formulario deberá desplegarse una ventana emergente con los datos capturados.
-4.	crear la página del listado de productos: crear una nueva página y nombrarla “listado de productos”. esta página deberá mostrar una lista de todos los productos almacenados. cada producto deberá incluir información como el nombre, la descripción, el precio y la cantidad disponible. Además, deberá incluir un botón para eliminar un producto.
-5.	crear la página de clientes: crear 2 nuevas páginas y nombrarlas “agregar cliente” y “listado de clientes”. la página de agregar cliente debe incluir un formulario para capturar la información del cliente. la página de listado de clientes deberá mostrar una lista de todos los clientes dados de alta, y se deberá incluir un botón para eliminar a un cliente. 
-6.	Crear una página de ventas: crear una nueva página y llamarla “ventas”. esta página deberá incluir una gráfica que muestre las ventas de cada tipo de producto en un período de tiempo determinado.
-7.	crear la página de estado de inventario: crear una nueva página y llamarla “estado de inventario”. esta página deberá mostrar el estado actual del inventario, incluyendo la cantidad disponible de cada producto.
-8.	por último utilizar componentes y módulos. hay que utilizar componentes y módulos para elementos comunes en todas las páginas, los elementos comunes van a ser botones, encabezados y pies de página, iconos etcétera.
+Para la sección del administrador, el flujo de trabajo implicará la creación de páginas para agregar y modificar productos, la creación de una página de inicio de sesión para el administrador y la creación de páginas para mostrar el listado de productos almacenados, los clientes que están dados de alta, las ventas de cada tipo de producto y el estado del inventario.
 
-A continuación se incluyen módulos para la sección de administrador:
+Para la sección del cliente, el flujo de trabajo implicará la creación de una máquina expendedora de botanas funcional con una pantalla de manejo y ranuras para ingresar billetes y monedas.
 
-•	módulo de formulario: crear un módulo de formulario que se pueda reutilizar en diferentes páginas del proyecto, como la página de agregar o modificar productos y la página de agregar nuevos clientes. este módulo podría incluir campos de entrada de texto, botones de envío y otros elementos necesarios para capturar y procesar los datos que ingrese nuestro usuario.
+## Sección del administrador:
 
-•	módulo de lista de productos: se podrá crear un módulo de lista de productos que se pueda reutilizar en diferentes páginas del proyecto, como la página del listado de productos y la página de ventas. este módulo podría incluir elementos con la imagen del producto, el nombre del producto, el precio y la cantidad disponible.
+1. Definir los requisitos y objetivos de la sección del administrador.
+2. Crear un esquema para almacenar los productos, clientes y ventas.
+3. Crear una página de inicio de sesión para el administrador.
+4. Crear una página de administración de productos que permita agregar, modificar y eliminar productos.
+5. Crear una página para mostrar el listado de productos almacenados.
+6. Crear una página de administración de clientes que permita agregar, modificar y eliminar clientes.
+7. Crear una página para mostrar el listado de clientes que están dados de alta.
+8. Crear una página para mostrar las ventas de cada tipo de producto.
+9. Crear una página para mostrar el estado del inventario.
 
-•	modulo de gráficas: crear un módulo de gráficas que se pueda reutilizar en diferentes páginas del proyecto como la página de ventas y la página de estado de inventario. este módulo podrá incluir diferentes tipos de gráficas y visualizaciones, como gráficas de barras, de pastel, de líneas.
+## Sección del cliente:
 
-•	Módulo de botones: crear un módulo de botones que se pueda reutilizar en las diferentes páginas, como la página de Estado de productos y la página de ventas. este modelo podría incluir diferentes tipos de botones, como botones de acción, botones de edición, botones de eliminación, etc.
+1. Definir los requisitos y objetivos de la sección del cliente.
+2. Crear un diseño de la máquina expendedora de botanas.
+3. Crear las ranuras para ingresar billetes y monedas.
+4. Crear una pantalla de manejo para mostrar los productos disponibles y las opciones de compra.
+5. Crear una funcionalidad para seleccionar los productos que el cliente desea comprar.
+6. Crear una funcionalidad para procesar el pago y dispensar los productos seleccionados.
+7. Crear una funcionalidad para dar cambio si es necesario.
+8. Realizar pruebas de calidad para asegurarse de que la máquina expendedora de botanas funcione correctamente.
 
-•	módulo de encabezado y pie de página: crear un módulo de encabezado y pie de página que se pueda reutilizar en varias páginas del proyecto. hola este módulo podría incluir elementos como el logotipo de la empresa, el nombre de la página, el menú de navegación, etcétera.
+## Justificación del patrón de diseño:
 
----
+El patrón de diseño que se utilizará para este proyecto es el patrón MVC (Modelo-Vista-Controlador). Este patrón se utiliza para separar la lógica de negocio, la presentación y la interacción del usuario en tres componentes distintos.
 
-3.	**Diseñar la sección de cliente:**
+La justificación para elegir este patrón de diseño es que ayuda a mejorar la modularidad, la escalabilidad y la reutilización del código. Además, facilita la colaboración entre los miembros del equipo y permite una mayor flexibilidad en el desarrollo y mantenimiento del proyecto.
 
-> **para la sección de cliente tenemos:**
+## Plan de trabajo:
 
-1.	Crear una página principal: crear una página y llamarla “cliente”. esta será la página principal donde los clientes podrán interactuar con la máquina expendedora.
-2.	diseñar la máquina expendedora: utilizar una imagen de la máquina expendedora para diseñarla. añadir sombras y patitas para darle profundidad y realismo.
-3.	agregar las hileras de botanas: crear cuatro hileras de botanas, cada una con 6 productos. agregar el nombre de los productos, los números de los productos como lo pide el documento que mandaron y los precios debajo de cada botana.
-4.	crear el panel de manejo: Crear un panel de manejo en el lado derecho de la página. este panel deberá incluir un logo, una pantalla de manejo y un teclado numérico con botones estilo Calculadora. la pantalla deberá mostrar el producto seleccionado y su precio. los botones deberán tener un estilo que cambie el cursor a una manita cuando se pase sobre ellos y produzca un sonido cuando se haga clic. los botones también deberán tener efectos de sombras.
-5.	agregar una sección de pago: Crear una sección de pago en la parte inferior de la página esta sección deberá estar dividida en 2 partes: una ranura para ingresar billetes y otra ranura para ingresar monedas.
+El plan de trabajo para este proyecto se divide en varias etapas:
 
-A continuación se incluyen módulos para la sección de cliente:
+1. Investigación y análisis de requisitos: En esta etapa se realizará una investigación y análisis de los requisitos del proyecto y se definirán los objetivos y el alcance del mismo. Esta sección se realizó el 14/04/2023 y estuvieron a cargo todos los integrantes del equipo.
 
-•	Módulo de historial de compras: crear un módulo de historial de compras que se muestra en la página principal del cliente. este módulo podrá incluir una lista de todas las compras anteriores del cliente, con información como la fecha de compra el producto comprado y el precio.
+2. Diseño y maquetación: En esta etapa se creará la maquetación en Figma y se diseñará la interfaz de usuario para ambas secciones del proyecto. Esta sección se realizó el 15/04/2023 y estuvieron a cargo Angel Briseño y Patricio Ferrusca.
 
-•	modulo de búsqueda: podríamos crear un módulo de búsqueda que se muestra en la página principal del cliente. este módulo permitiría a los clientes buscar productos en la máquina expendedora por nombre o número de producto como lo indican en él classroom.
+3. Desarrollo y programación: En esta etapa se llevará a cabo el desarrollo y programación de las distintas funcionalidades del proyecto, utilizando las tecnologías y herramientas adecuadas. Esta sección se realizó el 16/04/2023 y estuvieron a cargo Joel López y Renata Barbosa.
 
-•	módulo de promociones: podríamos crear un módulo de promociones que se muestra en la página principal del cliente. este módulo podrá incluir información sobre promociones especiales en productos seleccionados.
+4. Pruebas de calidad: En esta etapa se realizarán pruebas de calidad para asegurarse de que el proyecto cumpla con los requisitos y funcione correctamente. Esta sección se realizó el 16/04/2023 y estuvieron a cargo Joel López, Renata Barbosa y Angel Briseño.
 
-•	módulo de retroalimentación: podríamos crear un módulo de retroalimentación que se muestra en la página principal del cliente. este módulo permitirá a los clientes enviar comentarios o sugerencias sobre la máquina expendedora a los productos ofrecidos.
+5. Implementación y lanzamiento: En esta etapa se implementará el proyecto en un servidor que pueda verse en internet y se lanzará oficialmente. Esta sección se realizó el 16/04/2023 y estuvieron a cargo Todos los miembros del equipo.
 
-•	módulo de ayuda: podríamos crear un módulo de ayuda que se muestra en la página principal del cliente. este módulo podrá incluir información sobre cómo usar la máquina expendedora cómo pagar y cómo solucionar problemas comunes.
+## Posibles mejoras:
 
----
+Algunas posibles mejoras que se pueden ejecutar para mejorar el proyecto incluyen:
 
-4.	**Agregar los elementos comunes: crear componentes y módulos para elementos comunes en ambas secciones, como botones, encabezados y pies de página, iconos, etc.** 
-5.	**agregar interacciones: podemos agregar animaciones y transiciones para crear una experiencia de usuario fluida y atractiva.**
-6.	**comprobar la navegación: debemos asegurarnos de que la navegación entre las acciones del administrador y clientes sea clara y fácil de usar.**
-7.	**comprobar la accesibilidad: el diseño debe ser accesible para todos los usuarios.**
-8.	**hoy hay que adaptar el diseño del proyecto a que se adapte a diferentes tamaños de pantalla como nos enseñaron guiño guiño.**
-9.	**hay que comprobar que sirva y que no tenga errores.** 
+- Agregar una funcionalidad de búsqueda para los productos y clientes almacenados.
+- Implementar una función de paginación para las páginas que muestran una gran cantidad de datos.
+- Agregar una función de generación de informes para las ventas y el inventario.
+- Implementar un sistema de notificaciones automatizado para alertar al administrador de cualquier problema con el inventario o las ventas.
+
+## Ligas a los diferentes productos generados durante el proyecto:
+
+- Figma: https://www.figma.com/file/SXqyrme9xlTIENiBXKb0Vn/Proyecto?node-id=72-609&t=RlsaWLHZDryCzhcm-0
+- Contenedor GitHub: https://github.com/AngelReyBris/Proyecto_Final_Dise-o_Web.git
+- Página web en un servidor que pueda verse en internet: INDEX.html
