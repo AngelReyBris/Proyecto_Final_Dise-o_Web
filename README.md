@@ -61,6 +61,6 @@ Algunas posibles mejoras que se pueden ejecutar para mejorar el proyecto incluye
 
 ## Ligas a los diferentes productos generados durante el proyecto:
 
-- Figma: https://www.figma.com/file/SXqyrme9xlTIENiBXKb0Vn/Proyecto?node-id=72-609&t=RlsaWLHZDryCzhcm-0
+- Figma: https://www.figma.com/proto/SXqyrme9xlTIENiBXKb0Vn/Proyecto?node-id=1-2&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=1%3A2
 - Contenedor GitHub: https://github.com/AngelReyBris/Proyecto_Final_Dise-o_Web.git
 - Página web en un servidor que pueda verse en internet: INDEX.html
