@@ -286,7 +286,7 @@ h1,h2,h3{
     flex-direction: column;
     padding: 50px;
     border-radius: 20px;
-    background-color: rgb(9, 131, 180);
+    background-color: rgb(143, 206, 231);
   }
   
   .title {
@@ -295,6 +295,7 @@ h1,h2,h3{
   }
   
   .author {
+    font-weight: bold;
     margin-top: -20px;
     color: gold;
   }
@@ -308,7 +309,7 @@ h1,h2,h3{
   }
   
   .control-container {
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     padding: 20px;
     padding-top: 0px;
     margin: 20px;
@@ -364,7 +365,7 @@ h1,h2,h3{
   }
   
   .money-button {
-    background-color: green;
+    background-color: var(--extra);
     color: white;
     font-size: 18px;
   }
@@ -411,7 +412,7 @@ h1,h2,h3{
   
   .window {
     background-color: #000000;
-    color: rgb(2, 64, 156);
+    color: rgb(149, 185, 238);
     border-radius: 5px;
     box-shadow: -2px -2px rgb(10, 244, 123);
   }
