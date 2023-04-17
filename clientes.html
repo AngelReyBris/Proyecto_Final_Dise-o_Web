@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="preload" href="CSS/nomalize.css" as="styles">
+    <link rel="stylesheet" href="CSS/styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <title>Máquina Expendedora</title>
+
+</head>
+<body>
+    
+        <header class="titulo"> Bienvenido Admin <span class="titulo_pequenio">Proyecto</span></headerS>
+
+        
+        <div class="nav__bg">
+            <nav class="navegacion__Principal">
+                <a class="navegacion__Principal" href="inventario.html">Inventario</a>
+                <a class="navegacion__Principal" href="productos.html">Productos</a>
+                <a class="navegacion__Principal" href="compras.html">Listado de compras</a>
+                <a class="navegacion__Principal" href="ventas.html">Ventas</a>
+                <a class="navegacion__Principal" href="clientes.html">Clientes</a>
+                
+                
+            </nav>
+            
+        </div>
+
+<div>
+    <footer>
+    
+        <a class="boton" type="submit" href="INDEX.html">Regresar a la página principal</a>
+    
+    </footer>
+</div>
+<div>
+        <section>
+            <form class="cliente">
+                <fieldset>
+                    <legend>Nuevo cliente</legend>
+                <div class="contenedor__campos">
+                        <div class="campo">
+                        <label for="username">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                        </div>
+                        
+                        <div class="campo">
+                            <label for="correo">Correo:</label>
+                            <input type="email" id="correo" name="correo">
+                        </div>
+    
+                        <div>
+                            <input class="boton" type="button" value="Registrar" onclick="registrarCliente()">                        
+                        </div>
+                </div>
+                </fieldset>
+            </form>
+        </section>
+    </div>
+
+    <h3 class="titulo">Clientes Registrados</h3>
+	<table class="tabla tablas" id="tablaClientes">
+		<tr>
+			<th>Nombre</th>
+			<th>Correo</th>
+			<th>Acciones</th>
+		</tr>
+	</table>
+
+        <script>
+    
+            let clientes = [];
+            
+            function registrarCliente() {
+                let nombre = document.getElementById("nombre").value;
+                let correo = document.getElementById("correo").value;
+            
+                if(nombre !== "" && correo !== "") {
+                    let cliente = {nombre: nombre, correo: correo};
+                    clientes.push(cliente);
+                    agregarClienteTabla(cliente);
+                    document.getElementById("nombre").value = "";
+                    document.getElementById("correo").value = "";
+                }
+            }
+            
+            function agregarClienteTabla(cliente) {
+                let tabla = document.getElementById("tablaClientes");
+                let row = tabla.insertRow();
+                let nombreCell = row.insertCell(0);
+                let correoCell = row.insertCell(1);
+                let accionesCell = row.insertCell(2);
+                nombreCell.innerHTML = cliente.nombre;
+                correoCell.innerHTML = cliente.correo;
+                accionesCell.innerHTML = "<button onclick='editarCliente(this)'>Editar</button> <button onclick='eliminarCliente(this)'>Eliminar</button>";
+            }
+            
+            function eliminarCliente(button) {
+                let row = button.parentNode.parentNode;
+                let index = row.rowIndex - 1;
+                clientes.splice(index, 1);
+                document.getElementById("tablaClientes").deleteRow(row.rowIndex);
+            }
+            
+            function editarCliente(button) {
+                let row = button.parentNode.parentNode;
+                let index = row.rowIndex - 1;
+                let cliente = clientes[index];
+                let nombre = prompt("Ingrese el nuevo nombre:", cliente.nombre);
+                let correo = prompt("Ingrese el nuevo correo:", cliente.correo);
+                if(nombre !== "" && correo !== "") {
+                    cliente.nombre = nombre;
+                    cliente.correo = correo;
+                    row.cells[0].innerHTML = nombre;
+                    row.cells[1].innerHTML = correo;
+                }
+            }
+            
+            </script>
+    
+</body>
+
+</html>

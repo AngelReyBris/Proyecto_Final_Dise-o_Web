@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="preload" href="CSS/nomalize.css" as="styles">
+    <link rel="stylesheet" href="CSS/styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <title>Máquina Expendedora</title>
+
+</head>
+<body>
+    
+        <header class="titulo"> Bienvenido Admin <span class="titulo_pequenio">Proyecto</span></headerS>
+
+        
+        <div class="nav__bg">
+            <nav class="navegacion__Principal">
+                <a class="navegacion__Principal" href="inventario.html">Inventario</a>
+                <a class="navegacion__Principal" href="productos.html">Productos</a>
+                <a class="navegacion__Principal" href="compras.html">Listado de compras</a>
+                <a class="navegacion__Principal" href="ventas.html">Ventas</a>
+                <a class="navegacion__Principal" href="clientes.html">Clientes</a>
+                
+                
+            </nav>
+            
+        </div>
+
+<div>
+    <footer>
+    
+        <a class="boton" type="submit" href="INDEX.html">Regresar a la página principal</a>
+    
+    </footer>
+</div>
+<div>
+        <section>
+            <form class="cliente">
+                <fieldset>
+                    <legend>Nuevo producto</legend>
+                <div class="contenedor__campos">
+                        <div class="campo"> 
+                            <label for="codigo">Código:</label>
+		                    <input type="text" id="codigo" name="codigo">
+                        </div>
+
+                        <div class="campo">
+                        <label for="nombrep">Nombre del producto:</label>
+                        <input type="text" id="nombrep" name="nombrep" required>
+                        </div>
+                        
+                        <div class="campo">
+                            <label for="cantidad">Cantidad:</label>
+                            <input type="number" id="cantidad" name="cantidad">
+                        </div>
+
+                        <div class="campo">
+                            <label for="precio">Precio:</label>
+                            <input type="number" id="precio" name="precio">
+                            <input class="boton" type="button" value="Registrar" onclick="registrarProducto()">  
+                        </div>
+
+                                                  
+                        </div>
+                </div>
+                </fieldset>
+            </form>
+        </section>
+    </div>
+
+    <h3 class="titulo">Productos registrados</h3>
+	<table class="tabla tablas" id="tablaProductos">
+		<tr>
+			<th>Código</th>
+			<th>Nombre</th>
+			<th>Cantidad</th>
+            <th>Precio</th>
+		</tr>
+	</table>
+
+        <script>
+    
+            let producto = [];
+            
+            function registrarProducto() {
+                let codigo = document.getElementById("codigo").value;
+                let nombrep = document.getElementById("nombrep").value;
+                let cantidad = document.getElementById("cantidad").value;
+                let precio = document.getElementById("precio").value;
+            
+                if(nombre !== "" && correo !== "") {
+                    let producto = {codigo:codigo,nombrep: nombrep,cantidad:cantidad, precio: precio};
+                    productos.push(producto);
+                    agregarProductoTabla(producto);
+                    document.getElementById("codigo").value = "";
+                    document.getElementById("nombre").value = "";
+                    document.getElementById("cantidad").value = "";
+                    document.getElementById("precio").value = "";
+                }
+            }
+            
+            function agregarProductoTabla(producto) {
+                let tabla = document.getElementById("tablaProductos");
+                let row = tabla.insertRow();
+                let codigoCell = row.insertCell(0);
+                let nombreCell = row.insertCell(1);
+                let cantidadCell = row.insertCell(2);
+                let precioCell = row.insertCell(3);
+                let accionesCell = row.insertCell(4);
+                codigoCell.innerHTML = producto.codigo;
+                nombreCell.innerHTML = producto.nombre;
+                cantidadCell.innerHTML = producto.cantidad;
+                precioCell.innerHTML = producto.precio;
+
+                accionesCell.innerHTML = "<button onclick='editarCliente(this)'>Editar</button> <button onclick='eliminarCliente(this)'>Eliminar</button>";
+            }
+            
+            function eliminarProducto(button) {
+                let row = button.parentNode.parentNode;
+                let index = row.rowIndex - 1;
+                productos.splice(index, 1);
+                document.getElementById("tablaProductos").deleteRow(row.rowIndex);
+            }
+            
+            function editarProducto(button) {
+                let row = button.parentNode.parentNode;
+                let index = row.rowIndex - 1;
+                let producto = productos[index];
+                let codigo = prompt("Ingrese el nuevo codigo:", producto.codigo);
+                let nombre = prompt("Ingrese el nuevo nombre:", producto.nombre);
+                let cantidad = prompt("Ingrese la nueva cantidad:", producto.cantidad);
+                let precio = prompt("Ingrese el nuevo precio:", producto.precio);
+
+                if(codigo !== "" && nombre !== "" && cantidad !== "" && precio !== "" ) {
+                    producto.codigo = codigo;
+                    producto.nombre = nombre;
+                    producto.cantidad = cantidad;
+                    producto.precio = precio;
+                  
+                    row.cells[0].innerHTML = codigo;
+                    row.cells[1].innerHTML = nombre;
+                    row.cells[2].innerHTML = cantidad;
+                    row.cells[3].innerHTML = precio;
+                }
+            }
+            
+            </script>
+    
+</body>
+
+</html>
