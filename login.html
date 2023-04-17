@@ -40,23 +40,7 @@
     event.preventDefault();
   }
 
-  function signup() {
-  var username = $("#username").val();
-  var email = $("#email").val();
-  var password = $("#password").val();
 
-  var user = {
-    username: username,
-    email: email,
-    password: password
-  };
-
-  localStorage.setItem("user", JSON.stringify(user));
-
-  alert("Registro exitoso. Bienvenido, " + username + "!");
-
-  event.preventDefault();
-}
 
 
 </script>
