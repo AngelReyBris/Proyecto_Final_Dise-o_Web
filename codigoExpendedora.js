@@ -64,7 +64,7 @@ const codigoWindow_div = document.getElementById('code-window');
 
 
 /**
- * Botnes
+ * Botones
  */
 const A01_button = document.getElementById('A01');
 const A02_button = document.getElementById('A02');
